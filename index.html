@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
       * {
         margin: 0;
@@ -16,7 +23,7 @@
       }
 
       .listView {
-        width: 300px;
+        /* width: 300px; */
       }
 
       .listView li {
@@ -34,10 +41,19 @@
     </style>
   </head>
   <body>
-    <input type="text" class="inp" placeholder="오늘 일" />
-    <button class="btn">할일</button>
-    <ul class="listView"></ul>
-    <button class="dBtn">모두삭제</button>
+    <div class="container py-2">
+      <div class="row">
+        <div class="offset-3 col-6">
+          <div class="d-flex gap-1">
+            <input type="text" class="inp form-control" placeholder="오늘 일" />
+            <button class="btn btn-primary" style="width: 100px">할일</button>
+          </div>
+          <ul class="listView"></ul>
+          <div class="dBtn btn btn-danger d-block">모두삭제</div>
+        </div>
+      </div>
+    </div>
+
     <script src="js/script03.js"></script>
   </body>
 </html>

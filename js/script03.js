@@ -19,13 +19,13 @@ function viewData() {
   console.log("view" + listData)
   let viewList = ""
   listData.forEach(function (item, index) {
-    viewList += `<li>
-                    <div>
+    viewList += `<li class="py-2">
+                    <div class="d-flex align-items-center gap-1">
                     <input type="checkbox" ${item.completed ? "checked" : ""}  
-                    onclick="toggleCompleted(${index})" />
+                    onclick="toggleCompleted(${index})"  class="form-check-input"/>
                         <span class="${item.completed ? "view" : ""}">${item.text}</span>
                     </div> 
-                    <div onclick="del(${index})" class="myDel">[삭제]</div>
+                    <div onclick="del(${index})" class="myDel btn btn-primary small">del</div>
                 </li>`
   })
 
